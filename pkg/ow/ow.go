@@ -35,7 +35,7 @@ type OW struct {
 }
 
 func (ow *OW) Get(city string) (string, error) {
-	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=bb01eac4d32d76fabb7c230eae0b0585&units=metric&lang=ru", city)
+	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&units=metric&lang=ru", city, ow.Key)
 
 	resp, err := http.Get(url)
 	if err != nil {
