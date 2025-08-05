@@ -13,7 +13,7 @@ type Dependencies struct {
 	OW     *ow.OW
 }
 
-func Run(ctx context.Context, c config.Config) (err error) {
+func Run(_ context.Context, c config.Config) (err error) {
 	var deps Dependencies
 
 	deps.OW = &ow.OW{c.OW}
